@@ -1,0 +1,10 @@
+[package]
+name = "hopfile"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+memmap2 = "0.7"
+byteorder = "1.5"         # for endian-safe binary writing
+anyhow = "1.0"            # for error handling
+fxhash = "0.2"            # for hash map
