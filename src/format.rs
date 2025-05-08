@@ -22,6 +22,7 @@ impl HopHeader {
         w.write_u64::<LittleEndian>(self.meta_offset)?;
         w.write_u64::<LittleEndian>(self.meta_len)?;
         w.write_u64::<LittleEndian>(self.value_offset)?;
+
         // pad remainder to HOP_HEADER_SIZE
         let written = 4 + 8 * 5;
         let padding = HOP_HEADER_SIZE - written;
